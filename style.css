@@ -714,6 +714,26 @@ body {
   padding: 3rem;
 }
 
+.contact-btn {
+  display: inline-block;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 2rem 1rem;
+  }
+
+  .contact-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+
 .contact-title {
   font-size: 2rem;
   font-weight: 800;
@@ -724,10 +744,6 @@ body {
   color: var(--muted-foreground);
   margin-bottom: 2rem;
   line-height: 1.8;
-}
-
-.contact-btn {
-  margin-bottom: 2rem;
 }
 
 .social-links {

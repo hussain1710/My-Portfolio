@@ -43,8 +43,10 @@ mobileLinks.forEach(link => {
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return; // skip invalid selector
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(href);
     if (target) {
       const offsetTop = target.offsetTop - 80;
       window.scrollTo({
@@ -54,6 +56,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
 
 // Three.js 3D Scene
 const canvas = document.getElementById('hero-canvas');
