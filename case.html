@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Developer Portfolio | Your Name</title>
+  <meta name="description"
+    content="Professional web developer portfolio showcasing modern full-stack projects, technical skills, and qualifications. Specialized in React, Node.js, and creative digital solutions." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="case.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="container nav-container">
+      <div class="logo gradient-text">Portfolio</div>
+
+      <div class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="Hussain CV.pdf" class="btn-primary" target="_blank" rel="noopener">Resume</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#" class="btn-primary">Resume</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-grid"></div>
+    <div class="container hero-container">
+      <!-- Left column: text -->
+      <div class="hero-content">
+        <p class="hero-greeting fade-in">Hi, I'm</p>
+        <h1 class="hero-name gradient-text fade-in-delay-1">HUSSAIN</h1>
+        <h2 class="hero-title fade-in-delay-2">A Full Stack Developer</h2>
+        <p class="hero-description fade-in-delay-3">
+          Crafting beautiful, functional, and scalable web applications with modern technologies.
+          Passionate about clean code and exceptional user experiences.
+        </p>
+        <!-- NOTE: hero-buttons moved outside this div to control visual order on mobile -->
+      </div>
+
+      <!-- Right column: image with rotating ring -->
+      <div class="hero-image-container fade-in-delay-4">
+        <div class="gradient-ring"></div>
+        <img src="Hussain.jpg" alt="Hussain" class="hero-image">
+      </div>
+
+      <!-- Buttons moved here so mobile displays: name -> image -> buttons -->
+      <div class="hero-buttons fade-in-delay-4">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+
+
+      <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">Get to know me better</p>
+
+      <div class="about-grid">
+        <div class="about-content glass-card">
+          <p class="about-text">
+            I'm a passionate full-stack developer with expertise in building modern web applications.
+            With a keen eye for design and a deep understanding of user experience, I create solutions
+            that not only work flawlessly but also delight users.
+          </p>
+          <p class="about-text">
+            My journey in web development has equipped me with a diverse skill set and the ability to
+            tackle complex challenges. I'm constantly learning and adapting to new technologies to stay
+            at the forefront of the industry.
+          </p>
+        </div>
+
+        <div class="qualifications glass-card">
+          <div class="qualification-item">
+            <h3 class="qualification-title">4+ Years</h3>
+            <p class="qualification-text">Professional Experience</p>
+          </div>
+          <div class="qualification-item">
+            <h3 class="qualification-title">50+ Projects</h3>
+            <p class="qualification-text">Successfully Completed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="feature-icon">💻</div>
+          <h3 class="feature-title">Clean Code</h3>
+          <p class="feature-text">Writing maintainable, scalable, and well-documented code that stands the test of time.
+          </p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon">✨</div>
+          <h3 class="feature-title">Creative Solutions</h3>
+          <p class="feature-text">Bringing innovative ideas to life with modern design principles and cutting-edge
+            technology.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Fast Delivery</h3>
+          <p class="feature-text">Delivering high-quality projects on time without compromising on quality or
+            functionality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-subtitle">Technologies I work with</p>
+
+      <div class="skills-container">
+        <div class="skills-proficiency glass-card">
+          <h3 class="skills-subtitle">Proficiency Levels</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>JavaScript</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>TypeScript</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Node.js</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Tailwind CSS</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>SQL</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>Woo-Commerce</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span>E-Commerce Management</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-categories">
+          <div class="category-card glass-card">
+            <h4 class="category-title">Frontend</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind</span>
+            </div>
+          </div>
+          <div class="category-card glass-card">
+            <h4 class="category-title">Backend</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">SQL</span>
+            </div>
+          </div>
+          <div class="category-card glass-card">
+            <h4 class="category-title">Tools & Others</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">AWS</span>
+              <span class="tech-tag">Figma</span>
+            </div>
+          </div>
+          <div class="category-card glass-card">
+            <h4 class="category-title">Platforms</h4>
+            <div class="tech-tags">
+              <span class="tech-tag">Shopify</span>
+              <span class="tech-tag">WordPress</span>
+              <span class="tech-tag">Site5</span>
+              <span class="tech-tag">CPanel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Some of my recent work</p>
+
+      <div class="projects-grid">
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="nestoria.png" alt="Culti Kuwait Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title"> Nestoria - Real Estate Platform</h3>
+            <p class="project-description">
+              Helping you find your DREAM HOME with expert guidance and seamless property transactions.
+              Built entirely with custom code using JavaScript, TypeScript, CSS, and Bootstrap for a smooth, modern
+              experience.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">C#</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link gradient-text">Live Demo →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="wanderwise.png" alt="Culti Kuwait Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">WanderWise - For World Travelers</h3>
+            <p class="project-description">
+              WanderWise delivers unforgettable travel experiences with luxury flights, handpicked hotels, and 24/7
+              support. Built with custom code using JavaScript, TypeScript, CSS, and Bootstrap.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Next.js</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">C#</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link gradient-text">Live Demo →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="mediQ.png" alt="Culti Kuwait Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">MediQ - Your Health, Our Priority.</h3>
+            <p class="project-description">
+              CurePoint provides exceptional healthcare with expert professionals, advanced technology, and
+              patient-focused care.
+              Built with custom code using HTML, JavaScript, TypeScript, CSS.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Bootstrap</span>
+              <span class="tech-badge">C#</span>
+              <span class="tech-badge">Tailwind CSS</span>
+              <span class="tech-badge">SQL</span>
+             
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link gradient-text">Live Demo →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Corporate Projects Section -->
+  <section id="corporate-projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Corporate Websites</h2>
+      <p class="section-subtitle">Businesses I work with</p>
+      <div class="projects-grid">
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="culti_image.jpg" alt="Culti Kuwait Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Culti Milano Kuwait</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Customized the CULTI website using Shopify Liquid to reflect the brand’s essence of quality, luxury, and
+              style, enhancing user experience and visual appeal.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Shopify</span>
+              <span class="tech-badge">Liquid</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.cultikw.com/" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="Garmin_image.jpg" alt="Garmin Kuwait Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Garmin Kuwait</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Built on WordPress with WooCommerce, using custom code and plugins to reflect Garmin’s innovation and
+              deliver a smooth, dynamic shopping experience.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Woo-Commerce</span>
+              <span class="tech-badge">Php</span>
+              <span class="tech-badge">Elementor</span>
+            </div>
+            <div class="project-links">
+              <a href="https://garminkw.com/" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="powersports_image.jpg" alt="Power Sports Kuwait Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Power Sports Kuwait</h3>
+            <p class="project-description">
+             PORTFOLIO
+            </p>
+            <p class="project-description">
+              Built with JavaScript and CSS to showcase marine, land, and motor sports vehicles, highlighting
+              innovation, adventure, and a seamless user experience.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">cPanel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://powersportskw.com/" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="gourmet.jpg" alt="Gourmet Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Gourmet Restaurants</h3>
+            <p class="project-description">
+             PORTFOLIO
+            </p>
+            <p class="project-description">
+              Built on WordPress using custom coding and plugins to showcase Gourmet Food’s restaurants, online
+              services, and catering offerings, highlighting quality,
+             and exceptional dining experiences. 
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">WordPress</span>
+              <span class="tech-badge">Elementor</span>
+            </div>
+            <div class="project-links">
+              <a href="https://gourmetfoodme.com/" class="project-link gradient-text">View→</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="supermarine_image.jpg" alt="Supermarine Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Supermarine</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Developed on WordPress with WooCommerce, showcasing international marine equipment brands.
+              Focused on user-friendly e-commerce experience, innovation, and customer satisfaction for the Kuwaiti
+              market.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Woo-Commerce</span>
+              <span class="tech-badge">Php</span>
+            </div>
+            <div class="project-links">
+              <a href="https://supermarine.me/" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="trend_image.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Trend Fashion</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Built on Ecwid with custom JavaScript, CSS, showcasing international designer brands of
+              beach & summmer wear.
+              Focused on delivering a dynamic, user-friendly shopping experience with the latest trends in
+              fashion, lifestyle, and décor.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">Ecwid</span>
+            </div>
+            <div class="project-links">
+              <a href="https://trendgroup.me/" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="elite_image.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Elite Yachts</h3>
+            <p class="project-description">
+             PORTFOLIO
+            </p>
+            <p class="project-description">
+              Built on WordPress with custom coding to showcase Azimut yachts, delivering a sleek, user-friendly
+              portfolio that highlights luxury, innovation, and lifestyle at sea.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">WordPress</span>
+            </div>
+            <div class="project-links">
+              <a href="https://eliteyachts.net/" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="fairwinds_image.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Fairwinds Yachts</h3>
+            <p class="project-description">
+             PORTFOLIO
+            </p>
+            <p class="project-description">
+              Developed on WordPress with custom coding to showcase luxury yacht sales, charter, and management
+              services, emphasizing premium experiences and global reach.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">WordPress</span>
+            </div>
+            <div class="project-links">
+              <a href="https://fairwindsyachts.net/" class="project-link gradient-text">View→</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="seadesert.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Seas & Deserts</h3>
+            <p class="project-description">
+             PORTFOLIO
+            </p>
+            <p class="project-description">
+              Built with JavaScript, CSS, Node.js, and TypeScript using manual coding to showcase marine and land
+              equipment, delivering a robust, interactive, and professional user experience.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.seadesert.com/" class="project-link gradient-text">View→</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="polaris_image.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Polaris Kuwait</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Polaris Kuwait – Custom Website
+              Developed on Site5 with cPanel using custom code, JavaScript, and CSS to showcase powersports products and
+              innovations.
+              Focused on creating an interactive, user-friendly experience that reflects Polaris’ leadership in the
+              industry, highlights rider-driven innovations, and engages customers with inspirational brand
+              storytelling.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">WordPress</span>
+            </div>
+            <div class="project-links">
+              <a href="https://shop.seadesert.com/?page_id=13350" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="indian_image.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Indian Motorcycle</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Official dealers of Indian Motorcycle in Kuwait. Built on WordPress to showcase products, heritage, and
+              innovation,
+              providing a user-friendly and engaging experience for enthusiasts. The site highlights the brand’s legacy
+              since 1901, its passion for riding,
+              and commitment to delivering exceptional motorcycles to the Kuwaiti market.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">WordPress</span>
+            </div>
+            <div class="project-links">
+              <a href="https://shop.seadesert.com/?page_id=13541" class="project-link gradient-text">View→</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card">
+          <div class="project-image">
+            <img src="slingshot_image.jpg" alt="Sundek Logo" class="brand-image">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Slingshot Kuwait</h3>
+            <p class="project-description">
+             E-COMMERCE
+            </p>
+            <p class="project-description">
+              Official dealers of Slingshot in Kuwait. Built on WordPress to showcase the unique three-wheeled,
+              two-seat vehicle, offering a dynamic and engaging browsing experience. Highlights the innovative design
+              and thrill of driving,
+              while ensuring easy navigation and responsive performance for enthusiasts.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">WordPress</span>
+            </div>
+            <div class="project-links">
+              <a href="https://shop.seadesert.com/?page_id=13348" class="project-link gradient-text">View →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">Let's create something amazing together</p>
+
+      <div class="contact-card glass-card">
+        <h3 class="contact-title gradient-text">Let's Work Together</h3>
+        <p class="contact-text">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
+        <a href="#" class="btn-primary contact-btn">
+          Call Me On: +965 50980001
+        </a>
+        <p class="contact-text">
+          OR
+        </p>
+        <a href="mailto:developer.hussain17@gmail.com" class="btn-primary contact-btn">
+          Send Me an Email - developer.hussain17@gmail.com
+        </a>
+
+        <div class="social-links">
+          <a href="https://github.com" class="social-link" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/hussain-andheri1710/" class="social-link" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+
+        </div>
+
+        <div class="contact-info">
+          <p class="contact-location">📍 Based in Kuwait</p>
+          <p class="contact-availability">✅ Available for freelance opportunities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="footer-text">© 2025 Hussain Andheri. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="case.js"></script>
+</body>
+
+</html>
